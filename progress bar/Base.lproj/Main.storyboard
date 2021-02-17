@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="progress_bar" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VRI-fn-YPh">
+                                <rect key="frame" x="141" y="422" width="132" height="53"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <state key="normal" title="Push">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="pushPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="miO-Fo-56N"/>
+                                </connections>
+                            </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="DJ7-hx-9mi">
+                                <rect key="frame" x="20" y="150" width="374" height="2.5"/>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="osJ-t5-III">
+                                <rect key="frame" x="182" y="282" width="51" height="39"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hkf-AF-gsm">
+                                <rect key="frame" x="141" y="546" width="132" height="53"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <state key="normal" title="Timer">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="timerButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BG6-jY-vpi"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="hkf-AF-gsm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="141" id="1ed-DR-dER"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hkf-AF-gsm" secondAttribute="trailing" constant="141" id="6Z3-ET-YVq"/>
+                            <constraint firstItem="DJ7-hx-9mi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="84s-7H-Br0"/>
+                            <constraint firstItem="osJ-t5-III" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="182" id="8W9-7i-8mC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hkf-AF-gsm" secondAttribute="bottom" constant="263" id="8qA-Fd-Ngd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VRI-fn-YPh" secondAttribute="trailing" constant="141" id="B5K-Hk-qPj"/>
+                            <constraint firstItem="VRI-fn-YPh" firstAttribute="top" secondItem="osJ-t5-III" secondAttribute="bottom" constant="101" id="FxT-np-lNi"/>
+                            <constraint firstItem="osJ-t5-III" firstAttribute="top" secondItem="DJ7-hx-9mi" secondAttribute="bottom" constant="130.5" id="ISq-Uk-yno"/>
+                            <constraint firstItem="VRI-fn-YPh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="378" id="UMf-Z3-Hsx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="osJ-t5-III" secondAttribute="trailing" constant="181" id="VJS-l0-vC6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="VRI-fn-YPh" secondAttribute="bottom" constant="387" id="dkh-hY-pdq"/>
+                            <constraint firstItem="DJ7-hx-9mi" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="rtB-QW-ofc"/>
+                            <constraint firstItem="VRI-fn-YPh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="141" id="sEj-Es-DA4"/>
+                            <constraint firstItem="DJ7-hx-9mi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="106" id="yZE-yy-Ejg"/>
+                            <constraint firstItem="hkf-AF-gsm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="502" id="yf9-VL-OBb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="counterPressed" destination="osJ-t5-III" id="e0T-Ew-8wX"/>
+                        <outlet property="progressBar" destination="DJ7-hx-9mi" id="GBM-Lk-RXI"/>
+                        <outlet property="pushButton" destination="VRI-fn-YPh" id="yVa-Lk-wNh"/>
+                        <outlet property="timerButton" destination="hkf-AF-gsm" id="8Fh-MI-Zx6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="76.339285714285708"/>
+        </scene>
+    </scenes>
+</document>
